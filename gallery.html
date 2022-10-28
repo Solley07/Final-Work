@@ -163,17 +163,20 @@
         //initializing on scroll animation
         AOS.init();
 
-        const imagesArray = ["img/balcony.JPG", "img/villa royale 2.webp",
-          "img/ireta 1.webp", "img/views 4.webp",
-          "img/ireta 1.webp", "img/views 4.webp", "img/ireta 1.webp", "img/views 4.webp",
-          "img/ireta 1.webp", "img/views 4.webp", "img/ireta 1.webp", "img/views 4.webp",
-          "img/scenery 1.webp", "img/smartCity3.png"]
+        const imagesArray = [{ src: "img/balcony.JPG", name: "house" },
+        { src: "img/villa royale 2.webp", name: "house" },
+        { src: "img/ireta 1.webp", name: "house" },
+        { src: "img/views 4.webp", name: "house" },
+        { src: "img/villa royale 2.webp", name: "house" },
+        { src: "img/ireta 1.webp", name: "house" },
+        ]
         const galleryDiv = document.querySelector(".galleryDiv")
         // loop through and display images
         const displayImages = () => {
           imagesArray.forEach((item, index) => {
             const html = `
-            <img class="galleryImg" src=${item.replace(/ /g, '%20')} data-index=${index} 
+            <img class="galleryImg" src=${item.src.replace(/ /g, '%20')} data-index=${index} 
+              alt=${item.name}
             data-aos=${index % 2 ? "fade-right" : "fade-left"}>
             `
             galleryDiv.insertAdjacentHTML("beforeend", html);
@@ -231,10 +234,19 @@
           index = index < imagesArray.length - 1 ? index = index + 1 : index = 0
           setImage();
         }
+        //keyboard controls
+        window.addEventListener("keydown", (e) => {
+          if (e.keyCode == 37) {
+            return prev()
+          }
+          if (e.keyCode == 39) {
+            return next()
+          } else return
+        })
         //set image in modal and update count 
         const setImage = () => {
-          galleryModalImage.src = imagesArray[index].replace(/ /g, '%20')
-          count.innerHTML = `${index + 1}/${imagesArray.length}`
+          galleryModalImage.src = imagesArray[index].src.replace(/ /g, '%20')
+          count.innerHTML = `${imagesArray[index].name}`
         }
         images.forEach((img) => {
           img.addEventListener("click", function (e) {
@@ -269,7 +281,7 @@
         //download image
 
         downloadImage.addEventListener("click", async () => {
-          const imageSrc = imagesArray[index]
+          const imageSrc = imagesArray[index].src
           const image = await fetch(imageSrc)
           const imageBlog = await image.blob()
           const imageURL = URL.createObjectURL(imageBlog)
