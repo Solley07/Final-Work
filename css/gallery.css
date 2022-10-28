@@ -72,7 +72,7 @@
   text-align: center;
 }
 .galleryModalImage {
-  width: 50%;
+  width: 100%;
 }
 .galleryOverlay {
   position: absolute;
