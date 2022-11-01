@@ -294,6 +294,25 @@
           document.body.removeChild(link)
         })
 
+        //swipe gestures for mobile and tablets
+
+        let touchstartX = 0
+        let touchendX = 0
+
+        function checkDirection() {
+          if (touchendX < touchstartX) prev();
+          if (touchendX > touchstartX) next();
+        }
+
+        document.addEventListener('touchstart', e => {
+          touchstartX = e.changedTouches[0].screenX
+        })
+
+        document.addEventListener('touchend', e => {
+          touchendX = e.changedTouches[0].screenX
+          checkDirection()
+        })
+
       </script>
 
 </body>
