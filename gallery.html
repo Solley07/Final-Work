@@ -25,8 +25,8 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Geodata">
-  <title>Geodata Nigeria | Real Estate & Construction</title>
+  <meta name="description" content="Gallery">
+  <title>Gallery</title>
 
   <head>
     <link rel="shortcut icon" type="image/x-icon" href="img/Titleicon.png">
@@ -54,14 +54,12 @@
     <link rel="stylesheet" href="css/venobox/venobox.css">
 
     <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
 
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/nicepage" media="screen">
-    <link rel="stylesheet" href="css/home" media="screen">
     <link rel="stylesheet" href="css/gallery.css" media="screen">
-    <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
-
+    
 
 
     <script type="application/ld+json">{
@@ -79,38 +77,46 @@
 
 <body>
 
-  <div class="header-menu-wrap">
-    <ul class="dl-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about-us.html">About Us</a>
-      <li><a href="services-2.html">Services</a></li>
-      <li><a href="#">Projects</a>
-        <ul>
-          <li><a href="southernbridge.html"> Southern Bridge Luxury</a></li>
-          <li><a href="project-mbora.html"> Country Court</a></li>
-          <li><a href="project-smartcity.html"> Smart City</a></li>
-          <li><a href="project-luxury.html"> Villa Royale</a></li>
-          <li><a href="Iretahouse.html"> Archaic House</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-  <div class="header-right">
-    <a class="menu-btn" href="Brochure/Geodata-General-Brochure.pdf" target="_blank">View Brochure</a>
-
-    <div class="mobile-menu-icon">
-      <div class="burger-menu">
-        <div class="line-menu line-half first-line"></div>
-        <div class="line-menu"></div>
-        <div class="line-menu line-half last-line"></div>
-      </div>
+  <header class="header">
+    <div class="primary-header">
+    <div class="container">
+    <div class="primary-header-inner">
+    <div class="header-logo">
+    <a href="index.html"><img src="img/Titleicon.png" alt="Geodata" style="height: 30px;"></a>
     </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </header>
+    <div class="header-menu-wrap">
+    <ul class="dl-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about-us.html">About Us</a>
+    <li><a href="services-2.html">Services</a></li>
+    <li><a href="#">Projects</a>
+    <ul>
+      <li><a href="southernbridge.html"> Southern Bridge Luxury</a></li>
+      <li><a href="project-mbora.html"> Country Court</a></li>
+      <li><a href="project-smartcity.html"> Smart City</a></li>
+      <li><a href="project-luxury.html"> Villa Royale</a></li>
+      <li><a href="Iretahouse.html"> Archaic House</a></li>
+    </ul>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    </div>
+    <div class="header-right">
+    <a class="menu-btn" href="Brochure/Geodata-General-Brochure.pdf" target="_blank">View Brochure</a>
+    
+    <div class="mobile-menu-icon">
+    <div class="burger-menu">
+    <div class="line-menu line-half first-line"></div>
+    <div class="line-menu"></div>
+    <div class="line-menu line-half last-line"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </header>
   <section>
     <div class="container">
       <div class="row d-flex align-items-center">
@@ -163,12 +169,22 @@
         //initializing on scroll animation
         AOS.init();
 
-        const imagesArray = [{ src: "img/balcony.JPG", name: "house" },
-        { src: "img/villa royale 2.webp", name: "house" },
-        { src: "img/ireta 1.webp", name: "house" },
-        { src: "img/views 4.webp", name: "house" },
-        { src: "img/villa royale 2.webp", name: "house" },
-        { src: "img/ireta 1.webp", name: "house" },
+        const imagesArray = [{ src: "img/High quality house .PNG", name: "Southern Bridge Luxury" },
+        { src: "img/View.jpg", name: " Aerial View" },
+        { src: "img/aerial view.jpg", name: " Aerial View" },
+        { src: "img/landscape.png", name: "Aerial View" },
+        { src: "img/scenery 1.webp", name: "Outside Scene" },
+        { src: "img/outside.JPG", name: "Outside Scene" },
+        { src: "img/scenery 3.webp", name: "Outside Scene" },
+        { src: "img/room.jpg", name: "Inside look" },
+        { src: "img/room1.jpg", name: "Inside look" },
+        { src: "img/villa1.png", name: "Inside look" },
+
+        { src: "img/villa house.png", name: "Villa Royale" },
+        { src: "img/villa royale 2.webp", name: "Villa Royale" },
+        { src: "img/Villa6.JPG", name: "Villa Royale" },
+
+        { src: "img/ireta 1.webp", name: "Archaic House" },
         ]
         const galleryDiv = document.querySelector(".galleryDiv")
         // loop through and display images
@@ -318,3 +334,4 @@
 </body>
 
 </html>
+
